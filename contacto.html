@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Formulario de Contacto</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/contacto.css">
+    <link rel="stylesheet" href="css/slider.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Open+Sans&family=Signika+Negative&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+        <img class="logo" src="img/redes/logodelsur.png" width="200">
+        <input type="checkbox" id="menu">
+        <label for="menu"><img class="menu-icono" src="img/redes/menu-icono.png" alt=""></label>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="#">Busca tu destino<img src="img/redes/flecha-abajo.png" class="flechasubmenu"></a>
+                <ul>
+                    <li><a href="#">Argentina<img src="img/redes/flecha-derecha.png" class="flechasubmenu"></a>
+                    <ul>
+                       <li><a href="bariloche.html">Bariloche</a></li>
+                       <li><a href="cataratas.html">Cataratas del Iguazú</a></li>
+                       <li><a href="calafate.html">Calafate</a></li>
+                       <li><a href="mardelplata.html">Mar del Plata</a></li>
+                       <li><a href="purmamarca.html">Purmamarca</a></li>
+                       <li><a href="villacarlospaz.html">Villa Carlos Paz</a></li>
+                    </ul>
+                    </li>
+                    <li><a href="#">Suramérica<img src="img/redes/flecha-derecha.png" class="flechasubmenu"></a>
+                    <ul>
+                        <li><a href="brasil.html">Río de Janeiro</a></li>
+                        <li><a href="colombia.html">Catedral de Sal</a></li>
+                        <li><a href="peru.html">Machu Picchu</a></li>
+                        <li><a href="venezuela.html">Salto Angel</a></li>
+                    </ul>
+                    </li>
+                </ul>
+                </li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+<div class="slider"></div>
+<p>Escríbenos la consulta que tengas en mente o si quieres hablar con uno de nuestros desarrolladores. <br> ¡Estamos para lo que necesites!</p>
+<div class="container">
+  <h1>Formulario de Contacto</h1>
+  <form id="contact-form" action="https://formspree.io/f/mbjeeoga" method="POST">
+    <div class="form-group">
+      <label for="name">Nombre Completo</label>
+      <input type="text" class="form-control" id="name" name="name" placeholder="Nombre" required>
+    </div>
+    <div class="form-group">
+      <label for="email">Correo electrónico</label>
+      <input type="email" class="form-control" id="email" name="email" placeholder="Correo electrónico" required>
+    </div>
+    <div class="form-group">
+      <label for="message">Consulta</label>
+      <textarea class="form-control" id="message" name="message" placeholder="Contanos en qué podemos ayudarte.." required></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Enviar</button>
+  </form>
+  <div id="form-status"></div>
+</div>
+
+<script>
+  document.getElementById("contact-form").addEventListener("submit", function(event) {
+    event.preventDefault(); 
+
+    var form = event.target;
+    var status = document.getElementById("form-status");
+
+    var data = new FormData(form);
+    var xhr = new XMLHttpRequest();
+    xhr.open(form.method, form.action);
+    xhr.setRequestHeader("Accept", "application/json");
+
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState === XMLHttpRequest.DONE) {
+        if (xhr.status === 200) {
+          form.reset();
+          status.innerHTML = "¡Muchas gracias por enviarnos tu consulta! Nos contactaremos brevemente.";
+        } else {
+          status.innerHTML = "Ha ocurrido un error. Por favor, inténtalo nuevamente.";
+        }
+      }
+    };
+
+    xhr.send(data);
+  });
+</script>
+<footer>
+    <ul class="icon-redes">
+        <li><a href="#"><img src="img/redes/Facebook.png" alt=""></a></li>
+        <li><a href="#"><img src="img/redes/Instagram.png" alt=""></a></li>
+        <li><a href="#"><img src="img/redes/whatsapp.png" alt=""></a></li>
+        <li><a href="#"><img src="img/redes/twitter.png" alt=""></a></li>
+    </ul>
+    <div class="contacto"><a href="contacto.html">Contacto</a></div>
+</footer>
+</body>
+</html>
