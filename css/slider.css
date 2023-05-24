@@ -1,0 +1,51 @@
+.slider{
+    width: 100%; 
+    height: 500px; 
+    background-size: cover;
+    background-position: center;
+    top: 0;
+    animation: animate 60s infinite linear;
+}
+
+@keyframes animate {
+   0%{
+        background-image: url(../img/Bariloche/Bariloche7.jpg);
+    }
+
+    10% {
+        background-image: url(../img/Calafate/calafate7.jpg);
+    }
+
+    20%{
+        background-image: url(../img/Cataratas/cataratas7.jpg);
+    }
+
+    30%{
+        background-image: url(../img/MDQ/mardelplata1.jpg);
+    }
+
+    40%{
+        background-image: url(../img/Purmamarca/cerro7colores5.jpg);
+    }
+
+    50%{
+        background-image: url(../img/Venezuela/sa2.jpg);
+    }
+
+    60%{
+        background-image: url(../img/VillaCarlosPaz/villacp1.jpg);
+    }
+
+    70%{
+        background-image: url(../img/Brasil/rio3.jpg);
+    }
+
+    80%{
+        background-image: url(../img/Peru/machu1.jpg);
+    }
+
+    90%, 100%{
+        background-image: url(../img/Colombia/catedral.jpg);
+    }
+
+}

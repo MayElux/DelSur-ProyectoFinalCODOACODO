@@ -1,0 +1,96 @@
+body{
+    background: linear-gradient(#42291e, #633f2f, #885b46, #633f2f, #42291e);
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+p{
+    background: #00000059;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: white;
+    position: absolute;
+    top: 58%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border-radius: 25px;
+    text-shadow: 0 0 6px rgba(0, 0, 0, 0.8);
+    border: 1px solid #ffffff4f;
+}
+
+.container{
+    margin: 50px;
+  }
+
+h1{
+    font-family: 'Cinzel Decorative', sans-serif;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 0 0 6px rgba(0, 0, 0, 0.8);
+  }
+
+.form-group label{
+    font-family: 'Signika Negative';
+    font-weight: bold;
+    font-size: 20px;
+    color: #fff;
+  }
+
+.form-group input{
+    font-family: 'Open Sans', sans-serif;
+  }
+
+  footer{
+    background: #2c1105;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    justify-content: space-between;
+}
+
+footer .icon-redes{
+list-style: none;
+}
+
+footer .icon-redes li{
+    display: flex;
+    float: left;
+    padding: 10px;
+}
+
+footer .icon-redes li a{
+    text-decoration: none;
+}
+
+footer .icon-redes li a:hover{
+    background: rgba(255, 255, 255, 0.274);
+    border-radius: 3px;
+    box-shadow: 0 5px 10px #000;
+
+}
+
+footer .icon-redes li a img{
+    width: 25px;
+}
+
+footer .contacto{
+    align-items: center;
+    justify-content: right;
+    display: flex;
+    margin: 5px;
+}
+
+footer .contacto a{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+}
+
+footer .contacto a:hover{
+    color: #ac8354;
+}

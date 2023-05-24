@@ -1,0 +1,249 @@
+body{
+    background: linear-gradient(#42291e, #633f2f, #885b46, #633f2f, #42291e);
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    display: flex;
+}
+
+h1{
+    font-family: 'Signika Negative', sans-serif;
+    font-size: 3rem;
+    font-weight: 800;
+    color: #2c1105;
+    width: 100%;
+    text-shadow: 0 0 6px rgba(255, 255, 255, 0.8); 
+    text-align: center;
+    position: absolute;
+    top: 37%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.infoslider{
+    background: #00000059;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: white;
+    position: absolute;
+    top: 58%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border-radius: 25px;
+    text-shadow: 0 0 6px rgba(0, 0, 0, 0.8);
+    border: 1px solid #ffffff4f;
+}
+
+main{
+    padding: 30px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+h2{
+    font-family: 'Signika Negative', sans-serif;
+    width: 100%;
+    margin-top: 20px;
+    font-size: 2rem;
+    text-align: center;
+    color: white;
+    text-shadow: 0 0 6px rgba(0, 0, 0, 0.8);
+}
+
+.contenedor-principal p{
+    font-family:'Open Sans', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    color: white;
+}
+
+.actividades{
+    margin: 30px 0px;
+    text-align: center;
+}
+
+h3{
+    font-family: 'Signika Negative', sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 0 0 6px rgba(0, 0, 0, 0.8);
+}
+
+.imagenprincipal{
+    border: #ac83548f solid 3px;
+    border-radius: 10px;
+    float: right;
+    margin: 10px;
+}
+
+.video iframe{
+    border: #ac83548f solid 3px;
+    width: 90%;
+    margin: 40px 60px;
+}
+
+.mapa{
+    float: right;
+    margin: 10px;
+    border: #ac83548f solid 3px;
+}
+
+.imagensecundaria{
+    width: 500px;
+    margin: 15px;
+    border: #ac83548f solid 3px;
+    border-radius: 10px;
+}
+
+.cards{
+    position: relative;
+    width: 250px;
+    height: 300px;
+    margin: 30px; 
+}
+
+.cards div{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.cards .front{
+    transform: perspective(600px) rotateY(0deg);
+    box-shadow: 0 5px 10px #000;
+}
+
+.cards .front img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cards .front h4{
+    font-family: 'Signika Negative', sans-serif;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.473);
+    text-align: center;
+    text-shadow: 0 0 6px rgba(0, 0, 0, 0.6);
+}
+
+.cards .back h4{
+    font-family: 'Signika Negative', sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    color: #4b2501;
+    background: #ffffff75;
+}
+
+.cards .back{
+    transform: perspective(600px) rotateY(180deg);
+    background: #ac8354;
+    padding: 15px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    box-shadow: 0 5px 10px #000;
+}
+
+.cards .back p{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+.cards .back p a{
+    color: #fff;
+}
+
+.cards .back p a:hover{
+    color:  #4b2501;
+}
+
+.cards:hover .front{
+    transform: perspective(600px) rotateY(180deg);
+}
+
+.cards:hover .back{
+    transform: perspective(600px) rotateY(360deg);
+}
+
+.linea{
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    margin: 20px;
+}
+
+footer{
+    background: #2c1105;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    justify-content: space-between;
+}
+
+footer .icon-redes{
+list-style: none;
+}
+
+footer .icon-redes li{
+    display: flex;
+    float: left;
+    padding: 10px;
+}
+
+footer .icon-redes li a{
+    text-decoration: none;
+}
+
+footer .icon-redes li a:hover{
+    background: rgba(255, 255, 255, 0.274);
+    border-radius: 3px;
+    box-shadow: 0 5px 10px #000;
+
+}
+
+footer .icon-redes li a img{
+    width: 25px;
+}
+
+footer .contacto{
+    align-items: center;
+    justify-content: right;
+    display: flex;
+    margin: 5px;
+}
+
+footer .contacto a{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+}
+
+footer .contacto a:hover{
+    color: #ac8354;
+}
